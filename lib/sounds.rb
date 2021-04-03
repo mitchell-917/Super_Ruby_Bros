@@ -23,7 +23,4 @@ class Sounds
     @next_level.play
   end
 
-
-
-
 end
