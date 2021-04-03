@@ -18,11 +18,6 @@ GRAVITY = 7
 @win_screen = WinScreen.new
 @sounds = Sounds.new
 @game_over_sound = false
-@song = Music.new('./assets/song.mp3')
-@song.volume = 50
-@song.play
-@song.loop = true
-
 @stage_one = true
 @stage_two = false
 @stage_three = false
@@ -37,7 +32,6 @@ on :key_held do |event|
     @player.hero.play
   elsif event.key == 'space' && @player.jumper_state == 'grounded'
     @player.jumper_state = :jumping
-    @sounds.jump
   elsif event.key == 'return'
     @player.hard_reset = true
     @stage_one = true
@@ -47,7 +41,6 @@ on :key_held do |event|
     coin_reset(@level_two)    
     coin_reset(@level_three)    
     @game_over_sound = false
-    @song.play
   end
 end
 
@@ -180,7 +173,7 @@ update do
   platform_collision
   coin_collision
   enemy_collison
-  background = Image.new('./assets/bg.png', z: 3)
+  background = Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\bg.png', z: 3)
   @player.hero.x = @player.x
   @player.hero.y = @player.y
   @player.hero.add
@@ -210,11 +203,10 @@ update do
     @win_screen.coin_animation
   else
     if @game_over_sound == false
-      @song.stop
       @sounds.game_over
       @game_over_sound = true
     end
-    background = Image.new('./assets/gameover.png', z: 3, x: 150, y: 200) 
+    background = Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\gameover.png', z: 3, x: 150, y: 200) 
     endgame_text = Text.new('Coins Collected', z: 4, color: 'red', size: 25, x: 360, y: 500 ) 
     total_coins = Text.new(@player.coins, z: 4, color: 'red', size: 40, x: 438, y: 540) 
     endgame_text = Text.new('Hit Enter to try again...', z: 4, color: 'red', size: 20, x:350, y: 600 )
