@@ -22,16 +22,12 @@ class LevelThree
       Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\wood.png', x: 550, y: Window.height - 470, height: 10, width: 60, z: 10),
       Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\wood.png', x: 610, y: Window.height - 550, height: 10, width: 60, z: 10),
       Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\wood.png', x: Window.width - 200, y: Window.height - 620, height: 10, width: 200, z: 10)]
-
-
     @images = [Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\crab.png', x: 200, y: Window.height - 35, width: 50, height: 30,size: 20, z: 10),
       Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\jellyfish.png', x: 490, y: Window.height - 270, width: 175, height: 100, size: 20, z: 10),
       Image.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\jellyfish.png', x: 115, y: Window.height - 450, width: 175, height: 100, size: 20, z: 10)]
-
     @enemies = [Square.new(x: 200, y: Window.height - 25, size: 20, z: 0),
       Square.new(x: 490, y: Window.height - 270, size: 20, z: 0),
       Square.new(x: 115, y: Window.height - 450, size: 20, z: 0)]
-    
     @coins = [Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: Window.width - 30, y: Window.height - 200, height:40, width: 40, z: 10),
       Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: Window.width - 30, y: Window.height - 270, height:40, width: 40, z: 10),
       Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: 540, y: Window.height - 270, height:40, width: 40, z: 10),
@@ -39,11 +35,8 @@ class LevelThree
       Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: 440, y: Window.height - 270, height:40, width: 40, z: 10),
       Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: 50, y: Window.height - 200, height:40, width: 40, z: 10),
       Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\coin.png', clip_width: 84, time: 300, loop: true, x: 115, y: Window.height - 440, height:40, width: 40, z: 10)]
-
     @goal = Triangle.new(x1: Window.width - 60, x2: Window.width - 110, x3: Window.width - 10, y1: Window.height - 670, y2: Window.height - 620, y3: Window.height - 620, color: 'fuchsia', z: 0)
-
     @portal = Sprite.new('C:\Users\Desktop-01\Documents\VS_CODE_Projects\Super_Ruby_Bros\assets\portal.png', clip_width: 32, clip_height: 48, height: 68, width: 52, time: 300, loop: true, x: Window.width - 100, y: Window.height - 680,  z: 10)
-
     @enemy_0_speed = 0
     @enemy_1_speed = 0
     @enemy_2_speed = 0
