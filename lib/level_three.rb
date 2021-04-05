@@ -82,17 +82,17 @@ class LevelThree
 
   def check_enemy_1_boundary
     if @enemies[1].y == Window.height - 270
-      @enemy_1_speed = 8
+      @enemy_1_speed = 2
     elsif @enemies[1].y == Window.height - 110
-      @enemy_1_speed = -8
+      @enemy_1_speed = -2
     end
   end
 
   def check_enemy_2_boundary
     if @enemies[2].y == Window.height - 450
-      @enemy_2_speed = 8
+      @enemy_2_speed = 2
     elsif @enemies[2].y == Window.height - 250
-      @enemy_2_speed = -8
+      @enemy_2_speed = -2
     end
   end
 
